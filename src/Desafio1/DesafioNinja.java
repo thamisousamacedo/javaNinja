@@ -1,42 +1,77 @@
 package Desafio1;
 
-public class DesafioNinja {    public static void main(String[] args) {
+import java.sql.SQLOutput;
 
-    String nameNinja1 = "Shikamaru";
-    int age1 = 15;
-    String mission1 = "Liderar a equipe de resgate";
-    char level1 = 'D';
-    boolean status1 = false;
+public class DesafioNinja {
+    public static void main(String[] args) {
 
-    String nameNinja2 = "Rock Lee";
-    int age2 = 14;
-    String mission2 = "Exame Chunin";
-    char level2 = 'C';
-    boolean status2 = false;
+        String nameNinja1 = "Shikamaru";
+        int age1 = 14;
+        String mission1 = "Liderar a equipe de resgate";
+        char level1 = 'D';
+        String status1 = "Não Concluída";
 
-    String nameNinja3 = "Gaara";
-    int age3 = 14;
-    String mission3 = "Ajudar na missão de resgate";
-    char level3 = 'E';
-    boolean status3 = true;
+        if (age1 < 15 ) {
+            if (level1 == 'D' || level1 == 'C') {
+                status1 = "Concluida";
+            } else {
+                status1 = "Não concluída, não tem o nível estipulado";
+            }
+        }
 
-    if (age1 >= 15 && level1 == 'D') {
-        System.out.println(" O ninja " + nameNinja1 + " conseguiu completar a missão");
-    }
-    if (age2 >= 15 && level2 == 'C') {
-        System.out.println(" O ninja " + nameNinja2 + " conseguiu completar a missão");
-    } else {
-        System.out.println(" O ninja " + nameNinja2 + " não conseguiu completar a missão");
-    }
+        System.out.println("Nome do ninja: " + nameNinja1);
+        System.out.println("Idade do ninja: " + age1);
+        System.out.println("Nome da missão: " + mission1);
+        System.out.println("Nível da missão: " + level1);
+        System.out.println("Status da missão:" + status1);
 
-    if (age3 >= 15 && level3 == 'D') {
-        System.out.println(" O ninja " + nameNinja3 + " conseguiu completar a missão");
-    } else if (level3 == 'C') {
-        System.out.println("O ninja " + nameNinja3 + "conseguiu completar a missão");
-    } else {
-        System.out.println(" O ninja " + nameNinja3 + " não tem a idade e nem o nível necessários para completar a missão");
+
+        System.out.println("____________________________________________________________________________");
+
+        String nameNinja2 = "Rock Lee";
+        int age2 = 14;
+        String mission2 = "Exame Chunin";
+        char level2 = 'E';
+        String status2 = "Esperando aprovação";
+
+        if (age1 < 15 ) {
+            if (level2 == 'D' || level2 == 'C') {
+                status2 = "Concluida";
+            } else {
+                status2 = "Não concluída, não tem o nível estipulado";
+            }
+        }
+
+        System.out.println("Nome do ninja: " + nameNinja2);
+        System.out.println("Idade do ninja: " + age2);
+        System.out.println("Nome da missão: " + mission2);
+        System.out.println("Nível da missão: " + level2);
+        System.out.println("Status da missão:" + status2);
+
+        System.out.println("____________________________________________________________________________");
+
+        String nameNinja3 = "Gaara";
+        int age3 = 16;
+        String mission3 = "Ajudar na missão de resgate";
+        char level3 = 'A';
+        String status3 = "Não Concluída";
+
+        if (age1 < 15 ) {
+            if (level3 == 'D' || level3 == 'C') {
+                status3 = "Concluida";
+            } else {
+                status3 = "Não concluída, o ninja somente é chamado para missões de alto nível";
+            }
+        }
+
+        System.out.println("Nome do ninja: " + nameNinja3);
+        System.out.println("Idade do ninja: " + age3);
+        System.out.println("Nome da missão: " + mission3);
+        System.out.println("Nível da missão: " + level2);
+        System.out.println("Status da missão:" + status3);
+
     }
 }
-}
+
 
 
